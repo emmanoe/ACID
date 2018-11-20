@@ -41,9 +41,10 @@ function V = CalculACP(Echantilllon)
 res = diag(valeurs_propres);
 res = res.';
 res = [res;vecteurs_propres];
-disp('res')
-disp(res)
-disp(sortrows(res',1)')
+res = sortrows(res',1,'descend')';
+res
+res(1,:)=[];
+res
 end
 
 
