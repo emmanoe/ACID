@@ -32,19 +32,6 @@
 % plot(x,y2,'g')
 % hold off 
 
-%% EXERCICE 1 : Analyse en composantes principales - ACP
-Echantilllon = [0.50 0.25;0.25 0.50];
-CalculACP(Echantilllon)
 
-function V = CalculACP(Echantilllon)
-[vecteurs_propres,valeurs_propres]=eig(Echantilllon)
-res = diag(valeurs_propres);
-res = res.';
-res = [res;vecteurs_propres];
-res = sortrows(res',1,'descend')';
-res
-res(1,:)=[];
-res
-end
 
 
