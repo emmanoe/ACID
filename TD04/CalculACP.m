@@ -2,11 +2,14 @@
 function [ V ] = CalculACP(echantillon)
     %CALCULACP
     %
-    % Return the sorted eigenvectors according to their eigenvalue
+    % Return the matrix which contain the sorted eigenvectors according to their eigenvalue.
     %
     % Arguments:
     %     echantillon (matrix): square matrix array of datas sample
-    %    
+    %
+    % Returns:
+    %     V (matrix): matrix which contain the sorted eigenvectors
+    %   
     
     %Fetch eigenvalues and eigenvectors
     [vecteurs_propres,valeurs_propres]=eig(echantillon)
