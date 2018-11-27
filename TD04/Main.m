@@ -12,4 +12,4 @@ echantillon = [0.50 0.25;0.25 0.50];
 
 %% --------------------------------------------------
 % Call ACP
-CalculACP(e)
+CalculACP(echantillon)
