@@ -12,5 +12,5 @@ function proj = Projection (W, Echantillon)
     %     proj (vector): vector result of the projection in dimension k
     %
     
-    proj = transpose(W * Echantillon');
+    proj =  Echantillon'*W;
 end

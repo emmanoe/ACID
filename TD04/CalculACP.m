@@ -11,8 +11,14 @@ function [ V ] = CalculACP(echantillon)
     %     V (matrix): matrix which contain the sorted eigenvectors
     %   
     
+    % Settings
+    proportion_for_training = 0.1;
+    
+    % Split the examples into two groups (training, testing)
+    [training_sample, testing_sample] = SplitTrainAndTest( echantillon, proportion_for_training )
+    
     %Fetch eigenvalues and eigenvectors
-    [vecteurs_propres,valeurs_propres]=eig(echantillon)
+    [vecteurs_propres,valeurs_propres]=eig(cov(echantillon));
     
     %Add each eigenvalue at the top of their corresponding eigenvector matrix  
     V = diag(valeurs_propres);
